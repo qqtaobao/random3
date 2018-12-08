@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-1.9.0.js"></script>
+    <link  rel="stylesheet" href="../css/all.css" />
+  
+</head>
+<body>
+    <div id="pox">你好呀今天真冷你好嗨我是123你在哪里</div>
+</body>
+<script>
+
+         $.ajax({
+
+             url:"/listmore",
+
+             success : function(data){
+
+                 console.log(data);
+             }
+         })
+   
+    </script>
+</html>

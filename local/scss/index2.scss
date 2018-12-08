@@ -1,0 +1,13 @@
+$fn:#908;
+body{
+    font-size:16px;
+    #box{
+        color:red;
+    }
+
+    #pox{
+        background: #890 - 100;
+        color:$fn + 100;
+
+    }
+}

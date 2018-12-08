@@ -1,0 +1,1 @@
+"use strict";var num=123,app=100;

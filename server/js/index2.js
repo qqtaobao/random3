@@ -1,0 +1,1 @@
+"use strict";function fn(){var n=10;return function(){return n++}}var num=fn();num(),num();

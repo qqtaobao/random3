@@ -1,0 +1,21 @@
+html,body{ 
+
+    height:100%;
+    font: 700 20px/24px " ";
+    background: blue;
+}
+$fn:10;
+div{
+    font-size:$fn;
+    color:#909 + $fn;
+}
+$list:(1 20px 30px 40px)(2 20px 30px 40px);
+@each $n,$a,$b,$c in $list {
+    .box#{$n}{
+        width: $a;
+        height:$b;
+        font-size: $c;
+    }
+}
+
+
