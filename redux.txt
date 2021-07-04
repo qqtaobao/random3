@@ -1,0 +1,236 @@
+import React, {Component} from 'react';
+
+import './App.scss';
+
+
+import CommentBox from './components/box.jsx';
+
+cosnt tags = ['恐龙', '足球小子'];
+
+  class App extends Component{ 
+
+     constructor(props){ 
+       
+         super(props);
+
+         this.state = { 
+
+         comments: ['this is my first ']
+
+    }
+        
+ }
+
+ render(){ 
+
+     return( 
+
+      <div className='App'> 
+     
+        <header className='App-header' />
+
+
+   </div>
+
+  )
+
+   }
+
+}
+
+
+
+
+
+  import React from 'react';
+
+
+const CommentList = ({ comments }) =>{ 
+
+
+   return( 
+
+      <div className='comment-list-component'>
+
+      <label>评论列表</label>
+      
+       <ul className='list-group'>
+
+         { 
+
+         comments.map((comment,index)=>{ 
+
+          <li key={index} className='list-group-item'>{comment}</li>
+
+  })
+
+   }
+   </ul>   
+   
+  </div>
+  )
+
+}
+
+
+export default CommentList;
+
+
+
+
+import CommentList from './components/CommentList';
+
+constructor(){ 
+
+ this.addComment= this.addComment.bind(this);
+}
+
+
+
+addComment(comment){ 
+
+
+this.setState({ 
+
+  comment: [..this.state.comments, comment]
+})
+
+}
+
+
+render(){ 
+
+  const { comment } = this.state;
+
+  
+<CommentList comments={comments} />
+
+<CommentBox commentlength = {comments.length}
+
+   onAddCommnet= { this.addComment}
+
+ >
+
+}
+
+
+
+CommnetBox.jsx
+
+
+  
+handleSubmit(event){ 
+
+ this.props.onAddComment(this.textInput.valuee)
+
+ event.preventDefault();
+
+}
+
+
+ {this.props.commentlength}条评论
+
+
+
+
+context 的使用
+
+const themens = {
+
+   dara: { color: '', fontSize: 12 }
+}
+
+  import ThemeContext from './thements';
+
+
+ render(){ 
+
+    return( 
+
+     <ThemeContext.Provider value = { themes.dark}>
+      
+        <ThenedBar  />
+     </ThemeContext>
+  )
+
+}
+
+
+this.state = { 
+
+   theme: 'light'
+}
+
+changeTheme(x){
+
+  this.setState({ 
+
+   theme: sx
+})
+}
+
+
+render(){ 
+
+  return( 
+
+    <ThemenContext.Provider value={themes[this.state.theme]}>
+  
+     <a onClick={this.xxx}>a1</a>
+     <a
+
+ onClick={this.sss}
+
+ onClick = { ()=>{ this.changeTheme(a) } }
+
+onClick = {()=> { this.chnageThemen(b) }}
+ >a2</a>  
+      
+
+   </ThemenContext> 
+
+)
+}
+
+
+
+
+
+ThemeBar = ()=>{ 
+
+  
+return ( 
+
+   theme =>{ 
+
+     return ( 
+
+     <div className='alert mt-5' style={{ backgroundColor: theme.bgColor, color: theme.color  }} > </div>
+      样式区域
+   <button className={theme.classnames}>样式按钮</button>
+  )
+
+ }
+
+)
+
+}
+
+
+export default ThemeBar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
